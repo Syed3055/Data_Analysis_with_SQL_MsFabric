@@ -1,0 +1,11 @@
+{
+  "$schema": "https://developer.microsoft.com/json-schemas/fabric/gitIntegration/platformProperties/2.0.0/schema.json",
+  "metadata": {
+    "type": "Warehouse",
+    "displayName": "Train_data_Analysis"
+  },
+  "config": {
+    "version": "2.0",
+    "logicalId": "974b6ede-cc11-ab46-4430-e385c5a47a7f"
+  }
+}
