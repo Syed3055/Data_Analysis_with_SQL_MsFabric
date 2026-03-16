@@ -11,6 +11,237 @@
     },
     "defaultPowerBIDataSourceVersion": "powerBI_V3",
     "sourceQueryCulture": "en-US",
+    "tables": [
+      {
+        "name": "train_data",
+        "sourceLineageTag": "[dbo].[train_data]",
+        "columns": [
+          {
+            "name": "ID",
+            "dataType": "int64",
+            "sourceColumn": "ID",
+            "formatString": "0",
+            "sourceProviderType": "int",
+            "sourceLineageTag": "ID",
+            "summarizeBy": "sum",
+            "annotations": [
+              {
+                "name": "SummarizationSetBy",
+                "value": "Automatic"
+              }
+            ]
+          },
+          {
+            "name": "Warehouse_block",
+            "dataType": "string",
+            "sourceColumn": "Warehouse_block",
+            "sourceProviderType": "varchar",
+            "sourceLineageTag": "Warehouse_block",
+            "summarizeBy": "none",
+            "annotations": [
+              {
+                "name": "SummarizationSetBy",
+                "value": "Automatic"
+              }
+            ]
+          },
+          {
+            "name": "Mode_of_Shipment",
+            "dataType": "string",
+            "sourceColumn": "Mode_of_Shipment",
+            "sourceProviderType": "varchar",
+            "sourceLineageTag": "Mode_of_Shipment",
+            "summarizeBy": "none",
+            "annotations": [
+              {
+                "name": "SummarizationSetBy",
+                "value": "Automatic"
+              }
+            ]
+          },
+          {
+            "name": "Customer_care_calls",
+            "dataType": "int64",
+            "sourceColumn": "Customer_care_calls",
+            "formatString": "0",
+            "sourceProviderType": "int",
+            "sourceLineageTag": "Customer_care_calls",
+            "summarizeBy": "sum",
+            "annotations": [
+              {
+                "name": "SummarizationSetBy",
+                "value": "Automatic"
+              }
+            ]
+          },
+          {
+            "name": "Customer_rating",
+            "dataType": "int64",
+            "sourceColumn": "Customer_rating",
+            "formatString": "0",
+            "sourceProviderType": "int",
+            "sourceLineageTag": "Customer_rating",
+            "summarizeBy": "sum",
+            "annotations": [
+              {
+                "name": "SummarizationSetBy",
+                "value": "Automatic"
+              }
+            ]
+          },
+          {
+            "name": "Cost_of_the_Product",
+            "dataType": "int64",
+            "sourceColumn": "Cost_of_the_Product",
+            "formatString": "0",
+            "sourceProviderType": "int",
+            "sourceLineageTag": "Cost_of_the_Product",
+            "summarizeBy": "sum",
+            "annotations": [
+              {
+                "name": "SummarizationSetBy",
+                "value": "Automatic"
+              }
+            ]
+          },
+          {
+            "name": "Prior_purchases",
+            "dataType": "int64",
+            "sourceColumn": "Prior_purchases",
+            "formatString": "0",
+            "sourceProviderType": "int",
+            "sourceLineageTag": "Prior_purchases",
+            "summarizeBy": "sum",
+            "annotations": [
+              {
+                "name": "SummarizationSetBy",
+                "value": "Automatic"
+              }
+            ]
+          },
+          {
+            "name": "Product_importance",
+            "dataType": "string",
+            "sourceColumn": "Product_importance",
+            "sourceProviderType": "varchar",
+            "sourceLineageTag": "Product_importance",
+            "summarizeBy": "none",
+            "annotations": [
+              {
+                "name": "SummarizationSetBy",
+                "value": "Automatic"
+              }
+            ]
+          },
+          {
+            "name": "Gender",
+            "dataType": "string",
+            "sourceColumn": "Gender",
+            "sourceProviderType": "varchar",
+            "sourceLineageTag": "Gender",
+            "summarizeBy": "none",
+            "annotations": [
+              {
+                "name": "SummarizationSetBy",
+                "value": "Automatic"
+              }
+            ]
+          },
+          {
+            "name": "Discount_offered",
+            "dataType": "int64",
+            "sourceColumn": "Discount_offered",
+            "formatString": "0",
+            "sourceProviderType": "int",
+            "sourceLineageTag": "Discount_offered",
+            "summarizeBy": "sum",
+            "annotations": [
+              {
+                "name": "SummarizationSetBy",
+                "value": "Automatic"
+              }
+            ]
+          },
+          {
+            "name": "Weight_in_gms",
+            "dataType": "int64",
+            "sourceColumn": "Weight_in_gms",
+            "formatString": "0",
+            "sourceProviderType": "int",
+            "sourceLineageTag": "Weight_in_gms",
+            "summarizeBy": "sum",
+            "annotations": [
+              {
+                "name": "SummarizationSetBy",
+                "value": "Automatic"
+              }
+            ]
+          },
+          {
+            "name": "Reached.on.Time_Y.N",
+            "dataType": "int64",
+            "sourceColumn": "Reached.on.Time_Y.N",
+            "formatString": "0",
+            "sourceProviderType": "int",
+            "sourceLineageTag": "Reached.on.Time_Y.N",
+            "summarizeBy": "sum",
+            "annotations": [
+              {
+                "name": "SummarizationSetBy",
+                "value": "Automatic"
+              }
+            ]
+          },
+          {
+            "name": "__filepath__",
+            "dataType": "string",
+            "sourceColumn": "__filepath__",
+            "sourceProviderType": "varchar",
+            "sourceLineageTag": "__filepath__",
+            "summarizeBy": "none",
+            "annotations": [
+              {
+                "name": "SummarizationSetBy",
+                "value": "Automatic"
+              }
+            ]
+          },
+          {
+            "name": "total_sales_amt",
+            "dataType": "int64",
+            "sourceColumn": "total_sales_amt",
+            "formatString": "0",
+            "sourceProviderType": "int",
+            "sourceLineageTag": "total_sales_amt",
+            "summarizeBy": "sum",
+            "annotations": [
+              {
+                "name": "SummarizationSetBy",
+                "value": "Automatic"
+              }
+            ]
+          }
+        ],
+        "partitions": [
+          {
+            "name": "{{Partition_Name}}",
+            "mode": "directLake",
+            "source": {
+              "type": "entity",
+              "entityName": "train_data",
+              "expressionSource": "DatabaseQuery",
+              "schemaName": "dbo"
+            }
+          }
+        ],
+        "annotations": [
+          {
+            "name": "IsTableInBiModel",
+            "value": "False"
+          }
+        ]
+      }
+    ],
     "expressions": [
       {
         "name": "DatabaseQuery",
